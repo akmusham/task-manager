@@ -1,0 +1,189 @@
+html,body,#root{
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.add-button{
+  margin-left: 10px;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: aquamarine;
+}
+
+.todo-wrapper{
+  margin-top: 5%;
+}
+
+.overview-container{
+  padding: 5% 5% 3% 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile-container{
+  padding: 1%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.count-circle{
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #3763c3;
+  border-radius: 50px;
+  margin: auto;
+  opacity: 0.6;
+  font-size: 30px;
+}
+
+.input-field{
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+/* table css */
+
+.table-container{
+  padding: 0 10%;
+}
+
+.todo-table {
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.todo-table tr:first-child {
+  border-top: none;
+  background: #428bca;
+  color: #fff;
+}
+
+.todo-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+.todo-table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+.todo-table th {
+  display: none;
+}
+
+.todo-table td {
+  display: block;
+}
+
+.todo-table td:first-child {
+  margin-top: .5em;
+}
+
+.todo-table td:last-child {
+  margin-bottom: .5em;
+}
+
+.todo-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+.todo-table th,
+.todo-table td {
+  text-align: left;
+}
+
+.todo-table {
+  color: #333;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.todo-table tr {
+  border-color: #bfbfbf;
+}
+
+.todo-table th,
+.todo-table td {
+  padding: .5em 1em;
+}
+
+@media screen and (max-width: 601px) {
+  .todo-table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .todo-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  .todo-table td:before {
+    display: none;
+  }
+  .todo-table th,
+  .todo-table td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  .todo-table th:first-child,
+  .todo-table td:first-child {
+    padding-left: 0;
+  }
+  .todo-table th:last-child,
+  .todo-table td:last-child {
+    padding-right: 0;
+  }
+  .todo-table th,
+  .todo-table td {
+    padding: 1em !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
